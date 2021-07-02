@@ -1,0 +1,51 @@
+{{! Header  }}
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/product">ATN store</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/product">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/product/list">View Product</a>
+        </li>
+      </ul>
+    </div>
+    <a class="navbar-brand" href="/">Log out</a>
+  </div>
+</nav>
+{{! End Header  }}
+<h3>{{viewTitle}}</h3>
+
+<form action="/product" method="POST" autocomplete="off">
+  <input type="hidden" name="_id" value="{{product._id}}" />
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" name="name" placeholder="Name product" value="{{product.name}}" />
+    <div class="text-danger">
+      {{product.nameError}}</div>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <input type="text" class="form-control" name="description" placeholder="Description" value="{{product.description}}" />
+    <div class="text-danger">
+      {{product.descriptionError}}</div>
+  </div>
+  <div class="form-group">
+    <label>Price</label>
+    <input type="text" class="form-control" name="price" placeholder="$" value="{{product.price}}" />
+    <div class="text-danger">
+      {{product.priceError}}</div>
+  </div>
+
+  <div class="form-group mt-3">
+    <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>
+      Submit</button>
+    <a class="btn btn-secondary" href="/product/list"><i class="fa fa-list-alt"></i>
+      View All</a>
+  </div>
+</form>
