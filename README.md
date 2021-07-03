@@ -4,7 +4,7 @@
 ## controllers
     - login.controller.js
     - signup.controller.js
-    - page.controller.js (Bug in here)
+    - page.controller.js
 ## models
     - db.js
     - product.model.js
@@ -13,7 +13,7 @@
     - login.hbs
     - signup.hbs
     - page.hbs
-    - listproduct.hbs (Bug in here)
+    - listproduct.hbs
     ###layouts
         - main.hbs
 ## server.js
