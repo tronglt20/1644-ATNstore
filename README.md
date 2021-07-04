@@ -1,22 +1,23 @@
 ## Directory Structure:
 
 ```
-## controllers
-    - login.controller.js
-    - signup.controller.js
-    - page.controller.js
-## models
-    - db.js
-    - product.model.js
-    - user.model.js
-## views
-    - login.hbs
-    - signup.hbs
-    - page.hbs
-    - listproduct.hbs
-    ###layouts
-        - main.hbs
-## server.js
+├── controller
+|    ├── product.controller.js
+|    ├── user.controller.js
+├── model
+|    ├── db.js
+|    ├── product.model.js
+|    ├── user.model.js
+└── views
+|    ├── login.hbs
+|    ├── signup.hbs
+|    |
+|    └── product
+|    |   └── addOrEdit.hbs
+|    |	 └── list
+|    └── layouts
+|        └── main.handlebars
+└── server.js
 ```
 
 ## Note package

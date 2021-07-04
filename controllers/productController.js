@@ -16,6 +16,7 @@ router.post("/", (req, res) => {
     updateRecord(req, res);
   }
 });
+
 router.get("/list", (req, res) => {
   Product.find((err, docs) => {
     if (!err) {
@@ -27,6 +28,7 @@ router.get("/list", (req, res) => {
     }
   }).lean();
 });
+
 router.get("/:id", (req, res) => {
   Product.findById(req.params.id, (err, doc) => {
     if (!err) {
